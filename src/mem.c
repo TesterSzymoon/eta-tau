@@ -2,7 +2,7 @@
  * mem.c
  * (c) osminee, 2025
  *
- * Memory helper functions
+ * Memory struct and functions
  */
 
 #include "mem.h"
@@ -15,3 +15,4 @@ void mem_hw_r() {
 }
 
 /* big todo: create and finish the rest of the memory functions */
+
