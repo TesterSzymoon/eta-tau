@@ -2,7 +2,8 @@
  * mem.h
  * (c) osminee, 2025
  *
- * Memory helper (header)
+ * Memory struct and functions (header)
  */
 
 void mem_hw_r();
+
