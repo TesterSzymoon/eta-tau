@@ -9,17 +9,14 @@
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_primitives.h>
 #include <stdbool.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "const.h"
+#include "errlog.h"
 
-int errftl(char* mes, int erc) {
-	printf("%s\n", mes);
-	return erc;
-}
-
-int main() {
+/* main function */
+int main(int argc, char** argv) {
 	/* init allegro and addons */
 	al_init();
 	al_init_font_addon();
@@ -27,11 +24,11 @@ int main() {
 	al_install_keyboard();
 	al_install_mouse();
 
-	/* create main window */
-	ALLEGRO_DISPLAY* disp = al_create_display(BASE_W * BASE_S, BASE_H * BASE_S);
+	/* create main window and all necessary components */
+	ALLEGRO_DISPLAY* disp = al_create_display(DEFAULT_BASE_W * DEFAULT_BASE_S, DEFAULT_BASE_H * DEFAULT_BASE_S);
 	ALLEGRO_EVENT_QUEUE* defq = al_create_event_queue();
-	ALLEGRO_TIMER* refresh = al_create_timer(1.0 / 60.0);
-	ALLEGRO_EVENT ce;
+	ALLEGRO_TIMER* refresh = al_create_timer(1.0 / 60.0); /* 60 fps */
+	ALLEGRO_EVENT ce; /* current event */
 	char* wintit[TITBUF_SIZE];
 	bool finished = false;
 	ALLEGRO_FONT* defnt = al_create_builtin_font();
