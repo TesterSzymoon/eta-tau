@@ -17,4 +17,11 @@ hword mem_hw_r(hword* mem, unsigned int loc) {
 	return mem[LOC_WRAP]; /* memory address wrap-around */
 }
 
+/* mem_hw_w
+ * Write a halfword to memory.
+ */
+void mem_hw_w(hword* mem, unsigned int loc, hword hw) {
+    mem[LOC_WRAP] = hw & 0x3f; /* we only care about the 6 lower bits */
+}
+
 /* big todo: create and finish the rest of the memory functions */
