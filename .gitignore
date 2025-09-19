@@ -1,3 +1,4 @@
-# ignore build and vscode directiores
+# ignore build, vscode and cmake-gen directiores
 /build
 /.vscode
+/CMakeFiles
