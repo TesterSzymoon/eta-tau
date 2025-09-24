@@ -78,5 +78,7 @@ int main(int argc, char** argv) {
 	al_uninstall_mouse();
 	al_uninstall_keyboard();
 
+	printf("cleaned up, exiting\n");
+
 	return 0;
 }
