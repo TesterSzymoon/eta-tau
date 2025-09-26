@@ -13,11 +13,13 @@ option(USE_CONSOLE "Display a console by default (Windows only)" OFF)
 
 # all of the source and header files
 set(ETA_TAU_SOURCES
+    ./src/cpu.c
     ./src/errlog.c
     ./src/main.c
     ./src/mem.c)
 set(ETA_TAU_HEADERS
     ./src/const.h
+    ./src/cpu.h
     ./src/errlog.h
     ./src/mem.h)
 if(USE_CONSOLE)
@@ -27,5 +29,5 @@ else(USE_CONSOLE)
 endif(USE_CONSOLE)
 
 target_include_directories(eta-tau PUBLIC ./allegro/include)
-target_link_libraries(eta-tau allegro allegro_main allegro_font allegro_ttf allegro_primitives)
+target_link_libraries(eta-tau PUBLIC allegro PUBLIC allegro_main PUBLIC allegro_font PUBLIC allegro_ttf PUBLIC allegro_primitives)
 target_link_directories(eta-tau PUBLIC ./allegro/lib)
