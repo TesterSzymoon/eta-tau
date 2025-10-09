@@ -14,7 +14,7 @@
 
 #include "const.h"
 #include "errlog.h"
-#include "mem.h"
+#include "types.h"
 
 /* main function */
 int main(int argc, char** argv) {
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 	ALLEGRO_EVENT_QUEUE* defq = al_create_event_queue();
 	ALLEGRO_TIMER* refresh = al_create_timer(1.0 / 60.0); /* 60 fps */
 	ALLEGRO_EVENT ce; /* current event */
-	char* wintit[TITBUF_SIZE];
+	char wintit[TITBUF_SIZE];
 	bool finished = false;
 	ALLEGRO_FONT* defnt = al_create_builtin_font();
 	ALLEGRO_MOUSE_STATE ms;
