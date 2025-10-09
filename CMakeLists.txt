@@ -20,7 +20,8 @@ set(ETA_TAU_SOURCES
 set(ETA_TAU_HEADERS
     ./src/const.h
     ./src/errlog.h
-    ./src/mem.h)
+    ./src/mem.h
+    ./src/types.h)
 if(USE_CONSOLE)
     add_executable(${PROJECT_NAME} ${ETA_TAU_SOURCES} ${ETA_TAU_HEADERS})
 else(USE_CONSOLE)
