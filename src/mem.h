@@ -5,7 +5,7 @@
  * Memory functions and struct (header)
  */
 
-typedef unsigned char hword;
+ #include "types.h"
 
 hword mem_hw_r(hword* mem, unsigned int loc);
 /*hword mem_wd_r();
