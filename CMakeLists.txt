@@ -19,7 +19,6 @@ set(ETA_TAU_SOURCES
     ./src/mem.c)
 set(ETA_TAU_HEADERS
     ./src/const.h
-    ./src/cpu.h
     ./src/errlog.h
     ./src/mem.h)
 if(USE_CONSOLE)
