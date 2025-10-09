@@ -5,18 +5,16 @@
  * CPU struct and functions
  */
 
-#include "mem.h"
+#include "types.h"
 
 struct cpu {
     struct {
-        hword al : 6; hword : 2;
-        hword ah : 6; hword : 2;
-        hword bl : 6; hword : 2;
-        hword bh : 6; hword : 2;
-        hword cl : 6; hword : 2;
-        hword ch : 6; hword : 2;
-        hword dl : 6; hword : 2;
-        hword dh : 6; hword : 2;
+        word a : 12; word : 4;
+        word b : 12; word : 4;
+        word c : 12; word : 4;
+        word d : 12; word : 4;
+
+        hword f : 6; hword : 2;
     } regs;
 } cpu;
 
