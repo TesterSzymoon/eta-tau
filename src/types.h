@@ -5,5 +5,6 @@
  * Typedefs for the emulator
  */
 
-typedef unsigned char hword;
-typedef unsigned short word;
+typedef struct {unsigned char x : 6;} hword;
+typedef struct {hword x[2];} word;
+typedef struct {hword x[3];} aword;
