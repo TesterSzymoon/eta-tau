@@ -1,32 +1,26 @@
-Zgelk 1201 ISA:
+# Zgelk 1201 CPU
 
-* * * GENERAL * * *
-The Zgelk 1201 processor is a 6/12-bit CPU, employed in the eta-tau computer. It has
-6-bit (64 possible) opcodes, with 12-bit registers and an 18-bit address bus.
+## General
+The Zgelk 1201 processor is a 6/12-bit CPU, employed in the eta-tau computer. It has 6-bit (64 possible) opcodes, with 12-bit registers and an 18-bit address bus.
 
-* * * TERMINOLOGY * * *
-halfword - half of the machine word, equivalent to 6 bits
-word - the machine word defined as 12 bits
-adword - the address "word", equivalent to 3 halfwords or 18 bits
+## Terminology
+- halfword - half of the machine word, equivalent to 6 bits
+- word - the machine word defined as 12 bits
+- adword - the address "word", equivalent to 3 halfwords or 18 bits
 
-* * * ADDRESSING MEMORY * * *
-The 1201 has an 18-bit address bus, meaning that it can address 262,144 locations.
-The CPU accesses these locations as halfwords, meaning the maximum amount of memory
-addressable by the machine is 131072 words. (Obviously, a 1201 system doesn't use
-8-bit memory, but a 6-bit one.)
+## Addressing memory
+The 1201 has an 18-bit address bus, meaning that it can address 262,144 locations. The CPU accesses these locations as halfwords, meaning the maximum amount of memory addressable by the machine is 131072 words. (Obviously, a 1201 system doesn't use 8-bit memory, but a 6-bit one.)
 
-* * * REGISTERS AND FLAGS * * *
+## Registers and flags
 TODO: describe the registers (including CPU flags)
 
-* * * INSTRUCTION SET * * *
-The 1201 has 64 possible instructions due to its 6/12-bit design. Each opcode is
-encoded in the first 6 bits, then the arguments are given in a variable amount of
-halfwords. The maximum size of an instruction is 3 words. Each instruction is
-seeked from memory sequentially as a given number of halfwords.
+## INSTRUCTION SET
+The 1201 has 64 possible instructions due to its 6/12-bit design. Each opcode is encoded in the first 6 bits, then the arguments are given in a variable amount of halfwords. The maximum size of an instruction is 3 words. Each instruction is seeked from memory sequentially as a given number of halfwords.
 
 Each register is 12 bits wide, memory addresses are 18 bits wide.
 
 (val) - halfword, <val> - word, [adr] - address
+
 (000000)  0 - NOP             - no operation
 (000001)  1 - LDH (val) (reg) - load a halfword to the specified register
                                 (can specify low/high part of register)
@@ -51,12 +45,10 @@ Each register is 12 bits wide, memory addresses are 18 bits wide.
                                 from the A register
 (001100) 12 - JMC (cnd) [adr] - jumps to the given address if the given
                                 condition is true (short variant)
-(001101) 13 - JMC <cnd> [adr] - jumps to the given address if the given
-                                condition is true (long variant)
+(001101) 13 - unused
 (001110) 14 - JMN (cnd) [adr] - jumps to the given address if the given
                                 condition is NOT true (short variant)
-(001111) 15 - JMN <cnd> [adr] - jumps to the given address if the given
-                                condition is NOT true (long variant)
+(001111) 15 - unused
 (010000) 16 - JMP [adr]       - jumps to an address unconditionally
 (010001) 17 - TFR (rg1) (rg2) - transfer (copy) the value of a register
                                 to another register (rg1 to rg2)
