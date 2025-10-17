@@ -5,4 +5,9 @@
  * Error messages and logging (header)
  */
 
+#ifndef ERRLOG_H
+#define ERRLOG_H
+
 int errftl(char* mes, int erc);
+
+#endif

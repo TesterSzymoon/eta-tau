@@ -5,6 +5,9 @@
  * Various constants
  */
 
+#ifndef CONST_H
+#define CONST_H
+
 /* emulator window defaults */
 #define DEFAULT_BASE_W 180 /* width */
 #define DEFAULT_BASE_H 132 /* height */
@@ -18,3 +21,5 @@
 /* string constants */
 #define ETA_NAME "eta-tau"
 #define ETA_VER "0.0.1a"
+
+#endif
