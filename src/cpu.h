@@ -5,6 +5,9 @@
  * CPU struct and functions (header)
  */
 
+#ifndef CPU_H
+#define CPU_H
+
 #include "types.h"
 
 struct cpu {
@@ -20,3 +23,5 @@ struct cpu {
 } cpu;
 
 /* todo: finish the implementation */
+
+#endif
