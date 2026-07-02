@@ -27,7 +27,3 @@ if(USE_CONSOLE)
 else(USE_CONSOLE)
     add_executable(${PROJECT_NAME} WIN32 ${ETA_TAU_SOURCES} ${ETA_TAU_HEADERS})
 endif(USE_CONSOLE)
-
-target_include_directories(eta-tau PUBLIC ./allegro/include)
-target_link_libraries(eta-tau PUBLIC allegro PUBLIC allegro_main PUBLIC allegro_font PUBLIC allegro_ttf PUBLIC allegro_primitives)
-target_link_directories(eta-tau PUBLIC ./allegro/lib)

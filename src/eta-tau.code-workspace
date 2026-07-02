@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "eta-tau",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"types.h": "c"
+		}
+	}
+}
