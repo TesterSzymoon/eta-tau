@@ -2,6 +2,7 @@
 /build
 /.vscode
 /CMakeFiles
+*.code-workspace
 
-# ignore user-included allegro directory
+# ignore user-included raylib directory
 /allegro
