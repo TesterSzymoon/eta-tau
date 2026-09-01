@@ -5,4 +5,4 @@
 *.code-workspace
 
 # ignore user-included raylib directory
-/allegro
+/raylib
