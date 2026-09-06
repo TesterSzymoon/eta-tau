@@ -22,7 +22,7 @@ hword mem_hw_r(hword* mem, unsigned int loc) {
  * Write a halfword to memory.
  */
 void mem_hw_w(hword* mem, unsigned int loc, hword hw) {
-    mem[LOC_WRAP].x = hw.x & 0x3f; /* we only care about the 6 lower bits */
+    mem[LOC_WRAP] = hw & 0x3f; /* we only care about the 6 lower bits */
 }
 
 /* big todo: create and finish the rest of the memory functions */
